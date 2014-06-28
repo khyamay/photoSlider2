@@ -6,12 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Angular Slider</title>
         <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="author" href="humans.txt">
     </head>
     <body ng-controller="MainCtrl">
     	<div class="container slider">
-    		<img ng-repeat="slide in slides" ng-src="{{slide.image}}" ng-hide="!isCurrentSlideIndex($index)" class="slide slide-animation">
+    		<img ng-repeat="slide in slides" ng-src="{{slide.image}}" ng-hide="!isCurrentSlideIndex($index)" class="slide slide-animation nonDraggableImage" ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()">
     		<a href="#" class="arrow prev" ng-click="nextSlide()"></a>
     		<a href="#" class="arrow next" ng-click="prevSlide()"></a>
     		<div class="nav">
@@ -28,6 +28,7 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-animate.min.js"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-touch.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.12.1/TweenMax.min.js"></script>
         <script src="js/app.js"></script>
     </body>

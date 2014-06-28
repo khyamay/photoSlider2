@@ -1,4 +1,4 @@
-angular.module('slider', ['ngAnimate'])
+angular.module('slider', ['ngAnimate', 'ngTouch'])
 	.controller('MainCtrl', function ($scope){
 		$scope.slides = [
 			{image: 'images/img00.jpg', description: 'Image 00'},
